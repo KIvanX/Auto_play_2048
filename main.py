@@ -111,7 +111,7 @@ class Table_2048:
         self.end = True
 
     def recursion(self, way):
-        if len(way) == 4:
+        if len(way) == 5:
             arr = [list(self.a[i]) for i in range(4)]
             for side in way:
                 self.step(side, arr=arr)
@@ -145,7 +145,7 @@ while show:
             x, y = pygame.mouse.get_pos()
             if 275 < x < 395 and 430 < y < 465:
                 auto_game = not auto_game
-                table.anim_speed = 1000 if auto_game else 100
+                table.anim_speed = 300 if auto_game else 100
 
             if 150 < x < 270 and 430 < y < 465:
                 table = Table_2048(screen, 10, 10, 100)
